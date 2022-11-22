@@ -2,16 +2,50 @@
 
 
 .message {
-    border: 1px solid #000;
+    border: 1px solid darkcyan;
     display: grid;
     grid-template-columns: 1fr 7fr;
     align-items: center;
     gap: adaptiveSize(20, 10);
 
-    img {
-        align-self: start;
-        width: 100px;
+    .left {
+
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        grid-template-areas:
+            't-1 t-1'
+            't-2 t-3'
+        ;
+        padding: 10px;
+
+        .avatar {
+            grid-area: t-1;
+            align-self: start;
+            width: 100px;
+        }
+
+        .like {
+            grid-area: t-2;
+            width: 40px;
+            cursor: pointer;
+            text-align: center;
+
+            img {}
+
+            span {}
+        }
+
+        .dislike {
+            grid-area: t-3;
+            width: 40px;
+            cursor: pointer;
+            text-align: center;
+        }
     }
 
-    p {}
+    .right {
+        p {}
+    }
 }

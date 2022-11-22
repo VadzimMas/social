@@ -1,30 +1,30 @@
 import s from './user.module.scss';
 import avatar from '../../img/shared/avatar.png'
 
-const User = () => {
+const User = (props) => {
     return (
         <div className={s.user}>
             <img className={s.avatar} src={avatar} />
             <div className={s.info}>
                 <div className={s.name}>
-                    <span className={s.firstName}>Vadzim</span>
-                    <span className={s.lastName}>Mas</span>
+                    <span className={s.firstName}>{props.firstName}</span>
+                    <span className={s.lastName}>{props.lastName}</span>
                 </div>
                 <div className={s.birthDate}>
                     <span>Date of Birth : </span>
-                    <span></span>
+                    <span>{props.birthday}</span>
                 </div>
                 <div className={s.city}>
                     <span>City : </span>
-                    <span></span>
+                    <span>{props.city}</span>
                 </div>
                 <div className={s.education}>
                     <span>Education : </span>
-                    <span></span>
+                    <span>{props.education}</span>
                 </div>
                 <div className={s.site}>
                     <span>Web site : </span>
-                    <span></span>
+                    <span>{props.webSite}</span>
                 </div>
             </div>
         </div>
