@@ -1,0 +1,17 @@
+@import '../../styles/root.scss';
+
+
+.message {
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    align-items: center;
+    gap: adaptiveSize(20, 10);
+
+    img {
+        align-self: start;
+        width: 100px;
+    }
+
+    p {}
+}

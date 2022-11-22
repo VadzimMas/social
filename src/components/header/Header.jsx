@@ -1,5 +1,5 @@
 import styles from './header.module.scss'
-import avatar from '../../img/shared/avatar.png';
+import avatar from '../../img/shared/avatar.png'
 
 const Header = () => {
     return (

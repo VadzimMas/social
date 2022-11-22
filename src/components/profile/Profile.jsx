@@ -1,14 +1,17 @@
 import s from './profile.module.scss'
 import logo from '../../img/0.jpg'
 import User from '../user/User';
-import Posts from '../posts/Posts';
+import MyPost from '../posts/MyPost';
+import Messages from '../messages/Messages';
 
 const Profile = () => {
     return (
         <div className={s.profile} >
             <img className={s.logo} src={logo} alt="" />
             <User />
-            <Posts />
+            <MyPost />
+            <Messages />
+            <Messages />
         </div>
     )
 }

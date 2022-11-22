@@ -1,11 +1,10 @@
-import s from './posts.module.scss'
+import s from './myPost.module.scss'
 import btn from '../../styles/btn.module.scss'
 
-
-const Posts = () => {
+const MyPost = () => {
     return (
-        <div className={s.posts}>
-            <h2 className={s.header}>My Posts</h2>
+        <div className={s.myPost}>
+            <h2 className={s.header}>My Post</h2>
             <textarea
                 className={s.textArea}
                 rows="4"
@@ -19,4 +18,4 @@ const Posts = () => {
     )
 }
 
-export default Posts
+export default MyPost
