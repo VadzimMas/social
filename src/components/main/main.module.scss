@@ -2,6 +2,6 @@
 
 .main {
     width: 100%;
-    height: 80%;
+    height: calc(100vh - adaptiveSize(200, 82));
     overflow: scroll;
 }
