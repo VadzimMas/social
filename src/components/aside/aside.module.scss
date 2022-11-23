@@ -2,15 +2,13 @@
 
 .aside {
     background-color: darkcyan;
-    padding: adaptiveSize(30, 5);
-    // height: calc(100vh - adaptiveSize(200, 82));
-
+    padding: adaptiveSize(20, 5);
+    display: grid;
 
     nav {
-        height: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        align-content: start;
+        grid-template-rows: repeat(4, adaptiveSize(40, 30));
 
         a {
             text-decoration: none;
@@ -27,9 +25,8 @@
             }
 
             &:last-child {
-                // margin-top: calc(100vh - adaptiveSize(480, 225));
+                align-self: end;
             }
         }
     }
-
 }

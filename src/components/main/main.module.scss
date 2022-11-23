@@ -1,8 +1,5 @@
 @import '../../styles/root.scss';
 
 .main {
-    width: 100%;
-    border: 1px solid #000;
-    // height: calc(100vh - adaptiveSize(200, 82));
     overflow: scroll;
 }
