@@ -9,10 +9,10 @@ const Profile = () => {
         <div className={s.profile} >
             <img className={s.logo} src={logo} alt="" />
             <User
-                firstName='Vadzim'
+                firstName='Vad'
                 lastName='Mas'
                 birthday='10.07.1986'
-                city='Mosty'
+                city='New York'
                 education='hight school'
                 webSite='https://vmweb.com'
             />
@@ -20,31 +20,17 @@ const Profile = () => {
             <Messages
                 likeCount='5'
                 dislikeCount='2'
-                message='rc/components/user/User.jsx ksdcklmslmslkmlkmslkcmlskdmlkslkcnslknvsdncnckncnlksnlksnlknvlknslkmvslknvlkdnvlsknlvkn
-  Line 7:13:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images'
+                message='lorem'
             />
             <Messages
-                message='rc/components/user/User.jsx
-  Line 7:13:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images'
+                message='The idea behind -webkit-fill-available  at least at one point  was to allow for an element to intrinsically fit into a particular layout, i.e., fill the available space for that property. At the moment intrinsic values like this fully supported by the'
             />
             <Messages
-                likeCount='5'
-                dislikeCount='2'
-                message='rc/components/user/User.jsx ksdcklmslmslkmlkmslkcmlskdmlkslkcnslknvsdncnckncnlksnlksnlknvlknslkmvslknvlkdnvlsknlvkn
-  Line 7:13:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images'
-            />
-            <Messages
-                message='rc/components/user/User.jsx
-  Line 7:13:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images'
-            /> <Messages
-                likeCount='5'
-                dislikeCount='2'
-                message='rc/components/user/User.jsx ksdcklmslmslkmlkmslkcmlskdmlkslkcnslknvsdncnckncnlksnlksnlknvlknslkmvslknvlkdnvlsknlvkn
-  Line 7:13:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images'
-            />
-            <Messages
-                message='rc/components/user/User.jsx
-  Line 7:13:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images'
+                message='The idea behind -webkit-fill-available  at least at one point  was to allow for an element to intrinsically fit into a particular layout, i.e., fill the available space for that property. At the moment intrinsic values like this fully supported by the'
+            />   <Messages
+                message='The idea behind -webkit-fill-available  at least at one point  was to allow for an element to intrinsically fit into a particular layout, i.e., fill the available space for that property. At the moment intrinsic values like this fully supported by the'
+            />   <Messages
+                message='The idea behind -webkit-fill-available  at least at one point  was to allow for an element to intrinsically fit into a particular layout, i.e., fill the available space for that property. At the moment intrinsic values like this fully supported by the'
             />
         </div>
     )
