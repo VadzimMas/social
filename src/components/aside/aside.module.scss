@@ -2,16 +2,20 @@
 
 .aside {
     background-color: darkcyan;
-    padding: adaptiveSize(30, 10);
+    padding: adaptiveSize(30, 5);
+    height: calc(100vh - adaptiveSize(200, 82));
 
     nav {
+        height: 100%;
         display: grid;
         grid-template-columns: 1fr;
+        align-content: start;
 
         a {
             text-decoration: none;
             white-space: nowrap;
             color: wheat;
+            align-self: start;
 
             &:active {
                 color: wheat;
@@ -22,7 +26,7 @@
             }
 
             &:last-child {
-                margin-top: adaptiveSize(50, 20);
+                margin-top: calc(100vh - adaptiveSize(480, 225));
             }
         }
     }

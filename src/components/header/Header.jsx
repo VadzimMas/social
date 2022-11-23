@@ -1,9 +1,9 @@
-import styles from './header.module.scss'
+import s from './header.module.scss'
 import avatar from '../../img/shared/avatar.png'
 
 const Header = () => {
     return (
-        <header className={styles.header}>
+        <header className={s.header}>
             <nav>
                 <img src={avatar} alt="avatar" />
                 <a href="#">Home</a>

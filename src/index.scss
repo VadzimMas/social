@@ -6,4 +6,7 @@ body {
   background-color: wheat;
   padding: 1%;
   font-size: adaptiveSize(30, 18);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
