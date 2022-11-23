@@ -20,7 +20,7 @@ const Profile = () => {
             <Messages
                 likeCount='5'
                 dislikeCount='2'
-                message='rc/components/user/User.jsx
+                message='rc/components/user/User.jsx ksdcklmslmslkmlkmslkcmlskdmlkslkcnslknvsdncnckncnlksnlksnlknvlknslkmvslknvlkdnvlsknlvkn
   Line 7:13:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images'
             />
             <Messages

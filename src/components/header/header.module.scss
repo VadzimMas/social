@@ -9,13 +9,12 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         align-items: center;
-        gap: adaptiveSize(30, 18);
+        gap: adaptiveSize(30, 10);
         justify-items: end;
 
 
         img {
-            height: adaptiveSize(100, 50);
-            width: adaptiveSize(100, 50);
+            max-width: adaptiveSize(100, 60);
             margin-right: auto;
         }
 

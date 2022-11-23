@@ -9,7 +9,7 @@
 
     .avatar {
         align-self: start;
-        width: 100%;
+        max-width: adaptiveSize(100, 60);
     }
 
     .info {

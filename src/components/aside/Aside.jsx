@@ -1,8 +1,8 @@
-import styles from './aside.module.scss';
+import s from './aside.module.scss'
 
-const Aside = () => {
+const Aside = (props) => {
     return (
-        <aside className={styles.aside}>
+        <aside className={s.aside}>
             <nav>
                 <a href='#'>Profile</a>
                 <a href='#'>Messages</a>
