@@ -18,10 +18,10 @@ const Profile = () => {
             />
             <MyPost />
             <Messages
-                message='The idea behind -webkit-fill-available  at least at one point  was to allow for an element to intrinsically fit into a particular layout, i.e., fill the available space for that property. At the moment intrinsic values like this fully supported by the'
+                message=' fill the available space for that property. At the moment intrinsic values like this fully supported by the'
             />
             <Messages
-                message='The idea behind -webkit-fill-available  at least at one point  was to allow for an element to intrinsically fit into a particular layout, i.e., fill the available space for that property. At the moment intrinsic values like this fully supported by the'
+                message='The idea behindfully supported by the'
             />   <Messages
                 message='The idea behind -webkit-fill-available  at least at one point  was to allow for an element to intrinsically fit into a particular layout, i.e., fill the available space for that property. At the moment intrinsic values like this fully supported by the'
             />   <Messages

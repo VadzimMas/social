@@ -4,7 +4,7 @@
 .message {
     border: 1px solid darkcyan;
     display: grid;
-    grid-template-columns: minMax(0px, 150px) minMax(0px, 1000px);
+    grid-template-columns: max-content minMax(0px, 2000px);
     align-items: center;
     gap: adaptiveSize(20, 5);
     align-items: start;
@@ -12,8 +12,10 @@
     .left {
         display: grid;
         gap: 10px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, max-content);
+        justify-content: center;
         justify-items: center;
+        align-items: center;
         grid-template-areas:
             't-1 t-1'
             't-2 t-3'
@@ -49,8 +51,13 @@
     }
 }
 
-@media (max-width:425px) {
+@media (max-width:550px) {
     .message {
         grid-template-columns: minmax(0px, 1000px);
+
+        .left {
+            grid-template-columns: repeat(3, max-content);
+            grid-template-areas: 't-2 t-1 t-3';
+        }
     }
 }
