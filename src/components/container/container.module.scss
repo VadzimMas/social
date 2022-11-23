@@ -7,8 +7,8 @@
     padding: 5px;
     height: calc((var(--vh, 1vh) * 100)); // vh computed by js and - margin
     display: grid;
-    grid-template-columns: 1fr 10fr;
-    grid-template-rows: 1fr auto;
+    grid-template-columns: min-content auto;
+    grid-template-rows: min-content auto;
     gap: adaptiveSize(10, 5);
     grid-template-areas:
         'h h'
