@@ -3,7 +3,8 @@
 .aside {
     background-color: darkcyan;
     padding: adaptiveSize(30, 5);
-    height: calc(100vh - adaptiveSize(200, 82));
+    // height: calc(100vh - adaptiveSize(200, 82));
+
 
     nav {
         height: 100%;
@@ -26,7 +27,7 @@
             }
 
             &:last-child {
-                margin-top: calc(100vh - adaptiveSize(480, 225));
+                // margin-top: calc(100vh - adaptiveSize(480, 225));
             }
         }
     }
