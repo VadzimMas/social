@@ -1,4 +1,7 @@
 {
     "html.completion.attributeDefaultValue": "singlequotes",
-    "html.format.enable": true
+    "html.format.enable": true,
+    "cSpell.words": [
+        "predeploy"
+    ]
 }
