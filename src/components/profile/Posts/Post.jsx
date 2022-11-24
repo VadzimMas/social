@@ -1,18 +1,18 @@
-import s from './messages.module.scss'
-import avatar from '../../img/shared/avatar.png'
-import like from '../../img/like.svg'
-import dislike from '../../img/dislike.svg'
+import s from './Post.module.scss'
+import avatar from '../../../img/shared/avatar.png'
+import like from '../../../img/like.svg'
+import dislike from '../../../img/dislike.svg'
 import { useState } from 'react'
 
 
 
-const Messages = (props) => {
+const Post = (props) => {
 
     const [likeCount, setLikeCount] = useState(0);
     const [dislikeCount, setDislikeCount] = useState(0);
 
     return (
-        <div className={s.message}>
+        <div className={s.post}>
             <div className={s.left}>
                 <img className={s.avatar} src={avatar} alt="" />
                 <div className={s.like}>
@@ -36,5 +36,5 @@ const Messages = (props) => {
     )
 }
 
-export default Messages
+export default Post
 

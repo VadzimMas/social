@@ -1,7 +1,7 @@
-import Header from '../header/Header.jsx'
-import Aside from '../aside/Aside.jsx'
-import Main from '../main/Main.jsx';
-import styles from './container.module.scss'
+import Header from '../Header/Header.jsx'
+import Aside from '../Aside/Aside.jsx'
+import Main from '../Main/Main.jsx';
+import styles from './Container.module.scss'
 
 const Container = () => {
     return (

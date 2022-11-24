@@ -1,4 +1,4 @@
-import s from './aside.module.scss'
+import s from './Aside.module.scss'
 
 const Aside = (props) => {
     return (

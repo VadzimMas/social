@@ -8,7 +8,7 @@
     nav {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, adaptiveSize(40, 30));
+        grid-template-rows: repeat(4, min-content);
 
         a {
             text-decoration: none;

@@ -1,10 +1,13 @@
-import styles from './main.module.scss'
-import Profile from '../profile/Profile';
+import styles from './Main.module.scss'
+import Profile from '../Profile/Profile';
+import Dialogs from '../Dialogs/Dialogs';
 
 const Main = () => {
     return (
         <main className={styles.main}>
-            <Profile />
+            {/* <Profile /> */}
+            <Dialogs />
+
         </main>
     )
 }

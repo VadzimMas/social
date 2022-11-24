@@ -1,10 +1,10 @@
-import s from './user.module.scss';
-import avatar from '../../img/shared/avatar.png'
+import s from './User.module.scss';
+import avatar from '../../../img/shared/avatar.png'
 
 const User = (props) => {
     return (
         <div className={s.user}>
-            <img className={s.avatar} src={avatar} />
+            <img className={s.avatar} src={avatar} alt="" />
             <div className={s.info}>
                 <div className={s.name}>
                     <span className={s.firstName}>{props.firstName}</span>

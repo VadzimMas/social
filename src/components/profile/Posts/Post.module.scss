@@ -1,7 +1,7 @@
-@import '../../styles/root.scss';
+@import '../../../styles/root.scss';
 
 
-.message {
+.post {
     border: 1px solid darkcyan;
     display: grid;
     grid-template-columns: max-content minMax(0px, 2000px);
