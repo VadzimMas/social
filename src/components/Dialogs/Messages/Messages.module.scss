@@ -1,0 +1,59 @@
+@import '../Dialogs.module.scss';
+
+.messages {
+    grid-area: t-3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: $darkColor;
+
+    .person {
+        margin: 0 0 adaptiveSize(10, 5) 0;
+        display: grid;
+        gap: adaptiveSize(10, 5);
+        grid-template-columns: max-content minmax(0px, 2000px);
+        @include box-shadow;
+
+        &:last-child {
+            margin: 0;
+        }
+
+
+        .avatar {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, min-content);
+            justify-items: center;
+            align-items: center;
+
+            img {
+                width: adaptiveSize(100, 40);
+            }
+        }
+
+        .message {
+            position: relative;
+            display: grid;
+            align-content: center;
+            @include box-shadow;
+        }
+    }
+}
+
+@media (max-width:550px) {
+    .messages {
+        .person {
+            gap: 0;
+            grid-template-columns: auto;
+
+            .avatar {
+                display: grid;
+                gap: 5px;
+                grid-template-columns: max-content max-content;
+                grid-template-rows: repeat(2, min-content);
+                justify-items: center;
+                align-items: center;
+            }
+        }
+    }
+}
