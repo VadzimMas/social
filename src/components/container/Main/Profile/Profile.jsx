@@ -53,12 +53,13 @@ const Profile = () => {
             message: 'The idea behind -webkit-fill-available  at least at one point  was to allow for an element to intrinsically fit into a particular layout, i.e., fill the available space for that property. At the moment intrinsic values like this fully supported by the'
         },
     ]
-    const postElements = postsData.map(post =>
+    const postElements = postsData.map(el =>
         <Post
-            id={post.id}
-            like={post.like}
-            dislike={post.dislike}
-            message={post.message}
+            key={el.id}
+            id={el.id}
+            like={el.like}
+            dislike={el.dislike}
+            message={el.message}
         />
     )
 

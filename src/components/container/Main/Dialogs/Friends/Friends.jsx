@@ -11,6 +11,7 @@ const friendsData = [
 
 const friendElements = friendsData.map(el =>
     <Friend
+        key={el.id}
         id={el.id}
         name={el.name}
     />

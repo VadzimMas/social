@@ -57,6 +57,7 @@ const messagesData = [
 
 const messageElements = messagesData.map(el =>
     <Message
+        key={el.id}
         avatar={el.avatar}
         name={el.name}
         message={el.message}
