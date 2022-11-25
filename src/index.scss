@@ -9,9 +9,3 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-
-@supports (-webkit-touch-callout: none) {
-  body {
-    height: -webkit-fill-available;
-  }
-}

@@ -1,0 +1,9 @@
+@import '../Dialogs.module.scss';
+
+.messages {
+    grid-area: t-3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: $darkColor;
+}

@@ -1,0 +1,23 @@
+@import '../../../../styles/root.scss';
+
+.dialogs {
+    background-color: rgb(27, 161, 226);
+    border-radius: 7px;
+    color: $lightColor;
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-rows: min-content auto;
+    grid-template-areas:
+        't-1 t-1'
+        't-2 t-3'
+    ;
+    gap: adaptiveSize(10, 5);
+    height: inherit;
+
+    .header {
+        grid-area: t-1;
+        @include boxShadowBlue;
+        padding-left: 18px;
+        color: $darkColor;
+    }
+}

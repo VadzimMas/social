@@ -1,0 +1,26 @@
+@import '../../../../../styles/root.scss';
+
+.user {
+    border: 1px solid darkcyan;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    align-items: center;
+    gap: adaptiveSize(20, 10);
+    @include boxShadowGreen;
+
+
+    .avatar {
+        align-self: start;
+        max-width: adaptiveSize(100, 60);
+    }
+
+    .info {
+        .name {
+            margin-bottom: adaptiveSize(20, 10);
+
+            .firstName {
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@mixin boxShadowBlue {
+    padding: 5px;
+    border-radius: 7px;
+    border: 2px solid rgb(13, 118, 170);
+    box-shadow: inset 0 0 20px rgba(27, 160, 226, 0.577);
+    background-color: wheat;
+    color: $darkColor;
+}
+
+@mixin boxShadowGreen {
+    padding: 5px;
+    border-radius: 7px;
+    border: 2px solid darkcyan;
+    box-shadow: inset 0 0 20px darkcyan;
+    background-color: wheat;
+    color: $darkColorGreen;
+}
+
+$lightColor: wheat;
+$darkColor: rgb(13, 118, 170);
+$darkColorGreen: darkcyan;

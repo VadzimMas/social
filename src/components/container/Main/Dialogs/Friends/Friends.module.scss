@@ -1,0 +1,9 @@
+@import '../Dialogs.module.scss';
+
+.friends {
+    grid-area: t-2;
+    @include boxShadowBlue;
+    margin: 0;
+    padding: adaptiveSize(10, 5);
+    color: $darkColor;
+}

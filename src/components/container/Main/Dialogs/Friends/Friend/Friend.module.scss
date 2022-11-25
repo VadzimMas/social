@@ -1,0 +1,10 @@
+@import '../../../../../../styles/root.scss';
+
+a {
+    color: $darkColor;
+    padding: adaptiveSize(10, 5) 0;
+
+    &.active {
+        color: red;
+    }
+}

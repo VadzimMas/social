@@ -1,0 +1,49 @@
+@import '../../../../../../styles/root.scss';
+
+.message {
+    margin: 0 0 adaptiveSize(10, 5) 0;
+    display: grid;
+    gap: adaptiveSize(10, 5);
+    grid-template-columns: max-content minmax(0px, 2000px);
+    @include boxShadowBlue;
+
+    &:last-child {
+        margin: 0;
+    }
+
+
+    .avatar {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, min-content);
+        justify-items: center;
+        align-items: center;
+
+        img {
+            width: adaptiveSize(100, 40);
+        }
+    }
+
+    p {
+        position: relative;
+        display: grid;
+        align-content: center;
+        @include boxShadowBlue;
+    }
+}
+
+@media (max-width:550px) {
+    .message {
+        gap: 0;
+        grid-template-columns: auto;
+
+        .avatar {
+            display: grid;
+            gap: 5px;
+            grid-template-columns: max-content max-content;
+            grid-template-rows: repeat(2, min-content);
+            justify-items: center;
+            align-items: center;
+        }
+    }
+}

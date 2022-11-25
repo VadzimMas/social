@@ -1,0 +1,43 @@
+@import '../../../styles/root.scss';
+
+
+
+$lightColor: wheat;
+$darkColor: rgb(13, 118, 170);
+
+.aside {
+    background-color: darkcyan;
+    padding: adaptiveSize(20, 5);
+    display: grid;
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, min-content);
+
+        a {
+            text-decoration: none;
+            white-space: nowrap;
+            color: wheat;
+            align-self: start;
+
+            &:active {
+                color: wheat;
+            }
+
+            &:visited {
+                color: wheat;
+            }
+
+            &:last-child {
+                align-self: end;
+            }
+
+            &.active {
+                @include boxShadowBlue;
+            }
+        }
+
+
+    }
+}

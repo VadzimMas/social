@@ -1,0 +1,35 @@
+@import '../../../styles/root.scss';
+
+.header {
+    background-color: darkcyan;
+    padding: adaptiveSize(20, 5);
+
+    nav {
+        height: inherit;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        gap: adaptiveSize(30, 10);
+        justify-items: end;
+
+
+        img {
+            max-width: adaptiveSize(100, 60);
+            margin-right: auto;
+        }
+
+        a {
+            text-decoration: none;
+            white-space: nowrap;
+            color: wheat;
+
+            &:active {
+                color: wheat;
+            }
+
+            &:visited {
+                color: wheat;
+            }
+        }
+    }
+}
