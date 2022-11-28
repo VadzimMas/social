@@ -4,12 +4,32 @@ import Dialogs from './Dialogs/Dialogs.jsx'
 import { Routes, Route } from 'react-router-dom'
 
 
-const Main = () => {
+
+
+
+const Main = (props) => {
+
     return (
         <main className={styles.main}>
             <Routes>
-                <Route path='/profile/*' element={<Profile />} />
-                <Route path='/dialogs/*' element={<Dialogs />} />
+                <Route
+                    path='/profile/*'
+                    element={
+                        <Profile
+                            profile={props.state.profile}
+                            renderApp={props.renderApp}
+                        />
+                    }
+                />
+                <Route
+                    path='/dialogs/*'
+                    element={
+                        <Dialogs
+                            dialogs={props.state.dialogs}
+                        />
+                    }
+
+                />
             </Routes>
         </main>
     )

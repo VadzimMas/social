@@ -1,35 +1,40 @@
-import s from './Post.module.scss'
+import styles from './Post.module.scss'
 import avatar from '../../../../../img/shared/avatar.png'
 import like from '../../../../../img/like.svg'
 import dislike from '../../../../../img/dislike.svg'
-import { useState } from 'react'
 
 const Post = (props) => {
 
-    const [likeCount, setLikeCount] = useState(props.like);
-    const [dislikeCount, setDislikeCount] = useState(props.dislike);
+    function setLikesCount() {
+        props.profile.setLikesCount(props.profile.posts[props.id].id)
+    }
+
+    function setDislikesCount() {
+        props.profile.setDislikesCount(props.profile.posts[props.id].id)
+    }
 
     return (
-        <div className={s.post}>
-            <div className={s.left}>
-                <img className={s.avatar} src={avatar} alt="" />
-                <div className={s.like}>
+        <div className={styles.post}>
+            <div className={styles.left}>
+                <img className={styles.avatar} src={avatar} alt="" />
+                <div className={styles.like}>
                     <img
                         src={like}
                         alt=""
-                        onClick={() => { setLikeCount(likeCount + 1) }}
+                        onClick={setLikesCount}
                     />
-                    <span>{likeCount}</span>
+                    <span>{props.like}</span>
                 </div>
-                <div className={s.dislike}>
-                    <img src={dislike}
+                <div className={styles.dislike}>
+                    <img
+                        src={dislike}
                         alt=""
-                        onClick={() => { setDislikeCount(dislikeCount + 1) }}
+                        onClick={setDislikesCount}
                     />
-                    <span>{dislikeCount}</span>
+                    <span>{props.dislike}</span>
                 </div>
             </div>
-            <p className={s.right}>{props.message}</p>
+            <p className={styles.right}>{props.message}</p>
         </div>
     )
 }

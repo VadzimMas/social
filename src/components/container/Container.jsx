@@ -3,12 +3,18 @@ import Aside from './Aside/Aside.jsx'
 import Main from './Main/Main.jsx';
 import styles from './Container.module.scss'
 
-const Container = () => {
+
+const Container = (props) => {
+
     return (
         <div className={styles.container} >
             <Header />
             <Aside />
-            <Main />
+            <Main
+                state={props.state}
+                renderApp={props.renderApp}
+
+            />
         </div>
     )
 }

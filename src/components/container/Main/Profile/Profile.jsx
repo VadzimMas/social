@@ -1,84 +1,38 @@
-import s from './Profile.module.scss'
+import styles from './Profile.module.scss'
 import logo from '../../../../img/0.jpg'
 import User from './User/User';
 import NewPost from './NewPost/NewPost';
 import Post from './Posts/Post.jsx';
 
-const Profile = () => {
-
-    const user = {
-        firstName: 'Vad',
-        lastName: 'Mas',
-        birthday: '10.07.1986',
-        city: 'New York',
-        education: 'high school',
-        webSite: 'https://vmweb.com',
-    }
-
-    const postsData = [
-        {
-            id: 0,
-            like: 23,
-            dislike: 12,
-            message: ' fill the available space for that property. At the moment intrinsic values like this fully supported by the'
-        },
-        {
-            id: 1,
-            like: 33,
-            dislike: 122,
-            message: 'The idea  supported by the'
-        },
-        {
-            id: 2,
-            like: 223,
-            dislike: 432,
-            message: 'The idea behind -webkit-fill-available  at least at one point  was to allow for an element to intrinsically fit into a particular layout, i.e., fill the available space for that property. At the moment intrinsic values like this fully supported by the'
-        },
-        {
-            id: 3,
-            like: 23,
-            dislike: 43,
-            message: ' fill the available space for that property. At the moment intrinsic values like this fully supported by the'
-        },
-        {
-            id: 4,
-            like: 33,
-            dislike: 93,
-            message: 'The idea  supported by the'
-        },
-        {
-            id: 5,
-            like: 63,
-            dislike: 67,
-            message: 'The idea behind -webkit-fill-available  at least at one point  was to allow for an element to intrinsically fit into a particular layout, i.e., fill the available space for that property. At the moment intrinsic values like this fully supported by the'
-        },
-    ]
-    const postElements = postsData.map(el =>
+const Profile = (props) => {
+    const postElements = props.profile.posts.map(el =>
         <Post
             key={el.id}
             id={el.id}
             like={el.like}
             dislike={el.dislike}
             message={el.message}
+            profile={props.profile}
         />
     )
-
-
     return (
-        <div className={s.profile} >
-            <img className={s.logo} src={logo} alt="" />
+        <div className={styles.profile} >
+            <img className={styles.logo} src={logo} alt="" />
             <User
-                firstName={user.firstName}
-                lastName={user.lastName}
-                birthday={user.birthday}
-                city={user.city}
-                education={user.education}
-                webSite={user.webSite}
+                firstName={props.profile.users.firstName}
+                lastName={props.profile.users.lastName}
+                birthday={props.profile.users.birthday}
+                city={props.profile.users.city}
+                education={props.profile.users.education}
+                webSite={props.profile.users.webSite}
             />
-            <NewPost userName={user.firstName} />
-
+            <NewPost
+                userName={props.profile.users.firstName}
+                addPost={props.profile.addPost}
+                newPostText={props.profile.newPostText}
+                changeNewPostText={props.profile.changeNewPostText}
+            />
             {postElements}
-
         </div>
     )
 }
