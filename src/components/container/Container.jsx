@@ -11,9 +11,7 @@ const Container = (props) => {
             <Header />
             <Aside />
             <Main
-                state={props.state}
-                renderApp={props.renderApp}
-
+                store={props.store}
             />
         </div>
     )

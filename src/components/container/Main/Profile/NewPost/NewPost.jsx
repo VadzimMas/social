@@ -3,7 +3,6 @@ import btn from '../../../../../styles/btn.module.scss'
 import { useRef } from 'react';
 
 const NewPost = (props) => {
-
     let newPostText = useRef(null);
 
     let onPostChange = () => {

@@ -16,8 +16,7 @@ const Main = (props) => {
                     path='/profile/*'
                     element={
                         <Profile
-                            profile={props.state.profile}
-                            renderApp={props.renderApp}
+                            profile={props.store.getState().profile}
                         />
                     }
                 />
@@ -25,7 +24,7 @@ const Main = (props) => {
                     path='/dialogs/*'
                     element={
                         <Dialogs
-                            dialogs={props.state.dialogs}
+                            dialogs={props.store.getState().dialogs}
                         />
                     }
 
