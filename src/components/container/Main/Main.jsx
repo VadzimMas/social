@@ -8,7 +8,6 @@ import { Routes, Route } from 'react-router-dom'
 
 
 const Main = (props) => {
-
     return (
         <main className={styles.main}>
             <Routes>
@@ -17,6 +16,7 @@ const Main = (props) => {
                     element={
                         <Profile
                             profile={props.store.getState().profile}
+                            dispatch={props.store.dispatch}
                         />
                     }
                 />
@@ -25,6 +25,7 @@ const Main = (props) => {
                     element={
                         <Dialogs
                             dialogs={props.store.getState().dialogs}
+                            dispatch={props.store.dispatch}
                         />
                     }
 

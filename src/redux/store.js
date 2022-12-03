@@ -1,6 +1,17 @@
-import userAvatar from '../img/shared/avatar.png';
-import friendAvatar from '../img/shared/avatar.png';
+import userAvatar from '../img/shared/avatar.png'
+import friendAvatar from '../img/shared/avatar.png'
 import { renderApp } from '../index.js'
+
+const ADD_POST = 'ADD-POST'
+const CHANGE_NEW_POST_TEXT = 'CHANGE-NEW-POST-TEXT'
+const SET_LIKES_COUNT = 'SET-LIKES-COUNT'
+const SET_DISLIKES_COUNT = 'SET-DISLIKES-COUNT'
+const CHANGE_NEW_MASSAGE_TEXT = 'CHANGE-NEW-MASSAGE-TEXT'
+const ADD_MESSAGE = 'ADD-MESSAGE'
+
+
+
+
 const store = {
     _state: {
         profile: {
@@ -59,7 +70,7 @@ const store = {
                     message: store._state.profile.newPostText
                 }
                 store._state.profile.posts.push(newPost)
-                store._state.profile.changeNewPostText('')
+                store._state.profile.newPostText = ''
                 renderApp()
             },
             changeNewPostText(text) {
@@ -76,6 +87,13 @@ const store = {
             }
         },
         dialogs: {
+            friends: [
+                { id: 0, name: 'Bread' },
+                { id: 1, name: 'Nick' },
+                { id: 2, name: 'Donald' },
+                { id: 3, name: 'Silvia' },
+                { id: 4, name: 'Pamela' },
+            ],
             messages: [
                 {
                     id: 0,
@@ -127,19 +145,87 @@ const store = {
                 },
 
             ],
-            friends: [
-                { id: 0, name: 'Bread' },
-                { id: 1, name: 'Nick' },
-                { id: 2, name: 'Donald' },
-                { id: 3, name: 'Silvia' },
-                { id: 4, name: 'Pamela' },
-            ],
+            newMessageText: '',
+            changeNewMessageText(text) {
+                store._state.dialogs.newMessageText = text
+                renderApp()
+            },
+            addMessage() {
+                let newMessage = {
+                    id: store._state.dialogs.messages.length,
+                    avatar: userAvatar,
+                    name: 'me',
+                    message: store._state.dialogs.newMessageText,
+                }
+                store._state.dialogs.messages.push(newMessage)
+                store._state.dialogs.messages.newMessageText = ''
+                renderApp()
+            },
         },
     },
-    getState() { return this._state }
+
+    getState() { return this._state },
+
+    dispatch(action) {
+        if
+            (action.type === ADD_POST) {
+            store._state.profile.addPost()
+        }
+        else if
+            (action.type === CHANGE_NEW_POST_TEXT) {
+            store._state.profile.changeNewPostText(action.text)
+        }
+        else if
+            (action.type === SET_LIKES_COUNT) {
+            store._state.profile.setLikesCount(action.id)
+        }
+        else if
+            (action.type === SET_DISLIKES_COUNT) {
+            store._state.profile.setDislikesCount(action.id)
+        }
+        else if
+            (action.type === CHANGE_NEW_MASSAGE_TEXT) {
+            store._state.dialogs.changeNewMessageText(action.text)
+        }
+        else if
+            (action.type === ADD_MESSAGE) {
+            store._state.dialogs.addMessage()
+        }
+    }
 }
 
+export function addPostActionCreator() {
+    return { type: ADD_POST }
+}
 
+export function changeNewPostTextActionCreator(e) {
+    return {
+        type: CHANGE_NEW_POST_TEXT,
+        text: e.target.value
+    }
+}
+
+export function setLikesCountActionCreator(id) {
+    return {
+        type: SET_LIKES_COUNT, id: id
+    }
+}
+
+export function setDislikesCountActionCreator(id) {
+    return {
+        type: SET_DISLIKES_COUNT, id: id
+    }
+}
+
+export function changeNewMessageTextActionCreator(e) {
+    return {
+        type: CHANGE_NEW_MASSAGE_TEXT,
+        text: e.target.value
+    }
+}
+export function addMessageActionCreator() {
+    return { type: ADD_MESSAGE }
+}
 
 export default store
 

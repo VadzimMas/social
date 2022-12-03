@@ -12,7 +12,7 @@ const Profile = (props) => {
             like={el.like}
             dislike={el.dislike}
             message={el.message}
-            profile={props.profile}
+            dispatch={props.dispatch}
         />
     )
     return (
@@ -28,9 +28,8 @@ const Profile = (props) => {
             />
             <NewPost
                 userName={props.profile.users.firstName}
-                addPost={props.profile.addPost}
                 newPostText={props.profile.newPostText}
-                changeNewPostText={props.profile.changeNewPostText}
+                dispatch={props.dispatch}
             />
             {postElements}
         </div>

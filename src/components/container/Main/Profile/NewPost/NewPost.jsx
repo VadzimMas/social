@@ -1,29 +1,33 @@
-import s from './NewPost.module.scss'
+import styles from './NewPost.module.scss'
 import btn from '../../../../../styles/btn.module.scss'
-import { useRef } from 'react';
+import {
+    addPostActionCreator,
+    changeNewPostTextActionCreator
+} from '../../../../../redux/store';
 
 const NewPost = (props) => {
-    let newPostText = useRef(null);
+    function changeNewPostText(e) {
+        props.dispatch(changeNewPostTextActionCreator(e))
+    }
 
-    let onPostChange = () => {
-        props.changeNewPostText(newPostText.current.value)
+    function addPost() {
+        props.dispatch(addPostActionCreator())
     }
 
     return (
-        <div className={s.newPost}>
-            <h2 className={s.header}>New Post</h2>
+        <div className={styles.newPost}>
+            <h2 className={styles.header}>New Post</h2>
             <textarea
-                className={s.textArea}
-                ref={newPostText}
+                className={styles.textArea}
                 value={props.newPostText}
-                onChange={onPostChange}
+                onChange={(e) => changeNewPostText(e)}
                 placeholder={props.userName + ' enter your new message here ...'}
             />
-            <input
-                className={[btn.btn1, s.btn].join(' ')}
+            <button
+                className={[btn.btn1, styles.btn].join(' ')}
                 type='submit'
-                onClick={props.addPost}
-            />
+                onClick={addPost}
+            >addPost</button>
         </div>
     )
 }

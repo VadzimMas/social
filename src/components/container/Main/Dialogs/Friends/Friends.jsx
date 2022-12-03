@@ -1,5 +1,7 @@
 import styles from './Friends.module.scss';
 import Friend from './Friend/Friend';
+import { Route } from 'react-router-dom'
+
 
 const Friends = (props) => {
     const friendElements = props.friends.map(el =>
@@ -8,6 +10,7 @@ const Friends = (props) => {
             id={el.id}
             name={el.name}
         />
+
     )
 
     return (

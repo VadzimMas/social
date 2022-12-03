@@ -2,15 +2,19 @@ import styles from './Post.module.scss'
 import avatar from '../../../../../img/shared/avatar.png'
 import like from '../../../../../img/like.svg'
 import dislike from '../../../../../img/dislike.svg'
+import {
+    setLikesCountActionCreator,
+    setDislikesCountActionCreator
+} from '../../../../../redux/store';
 
 const Post = (props) => {
 
     function setLikesCount() {
-        props.profile.setLikesCount(props.profile.posts[props.id].id)
+        props.dispatch(setLikesCountActionCreator(props.id))
     }
 
     function setDislikesCount() {
-        props.profile.setDislikesCount(props.profile.posts[props.id].id)
+        props.dispatch(setDislikesCountActionCreator(props.id))
     }
 
     return (

@@ -4,7 +4,7 @@ import styles from './Friend.module.scss'
 const Friend = (props) => {
     return (
         <NavLink
-            to={'/dialogs/' + props.id}
+            to={'/dialogs/' + props.name}
             className={
                 ({ isActive }) => isActive ? styles.active : ''}
         >
