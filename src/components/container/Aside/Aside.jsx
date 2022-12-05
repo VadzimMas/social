@@ -6,13 +6,13 @@ const Aside = (props) => {
         <aside className={styles.aside}>
             <nav>
                 <NavLink
-                    to='/profile/'
+                    to='social/profile/'
                     className={
                         ({ isActive }) => isActive ? styles.active : ""
                     }
                 >Profile</NavLink>
                 <NavLink
-                    to='/dialogs/'
+                    to='social/dialogs/'
                     className={
                         ({ isActive }) => isActive ? styles.active : ""
                     }

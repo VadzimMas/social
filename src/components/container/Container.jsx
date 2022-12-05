@@ -13,7 +13,7 @@ const Container = (props) => {
             <Aside />
             <Routes>
                 <Route
-                    path='/*'
+                    path='/social/*'
                     element={
                         <Main store={props.store} />
                     }
