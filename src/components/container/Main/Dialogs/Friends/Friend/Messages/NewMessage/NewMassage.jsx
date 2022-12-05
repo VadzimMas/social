@@ -9,7 +9,8 @@ const MassageInput = (props) => {
     function changeNewMessageText(e) {
         props.dispatch(changeNewMessageTextActionCreator(e))
     }
-    const addMessage = () => {
+    const addMessage = (e) => {
+        e.preventDefault()
         props.dispatch(addMessageActionCreator())
     }
 

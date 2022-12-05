@@ -63,26 +63,28 @@ const store = {
             },
             newPostText: '',
             addPost() {
-                let newPost = {
-                    id: store._state.profile.posts.length,
-                    like: 0,
-                    dislike: 0,
-                    message: store._state.profile.newPostText
+                if (this.newPostText) {
+                    let newPost = {
+                        id: this.posts.length,
+                        like: 0,
+                        dislike: 0,
+                        message: this.newPostText
+                    }
+                    this.posts.push(newPost)
+                    this.newPostText = ''
+                    renderApp()
                 }
-                store._state.profile.posts.push(newPost)
-                store._state.profile.newPostText = ''
-                renderApp()
             },
             changeNewPostText(text) {
-                store._state.profile.newPostText = text
+                this.newPostText = text
                 renderApp()
             },
             setLikesCount(id) {
-                store._state.profile.posts[id].like++
+                this.posts[id].like++
                 renderApp()
             },
             setDislikesCount(id) {
-                store._state.profile.posts[id].dislike++
+                this.posts[id].dislike++
                 renderApp()
             }
         },
@@ -147,19 +149,21 @@ const store = {
             ],
             newMessageText: '',
             changeNewMessageText(text) {
-                store._state.dialogs.newMessageText = text
+                this.newMessageText = text
                 renderApp()
             },
             addMessage() {
-                let newMessage = {
-                    id: store._state.dialogs.messages.length,
-                    avatar: userAvatar,
-                    name: 'me',
-                    message: store._state.dialogs.newMessageText,
+                if (this.newMessageText !== '') {
+                    let newMessage = {
+                        id: this.messages.length,
+                        avatar: userAvatar,
+                        name: 'me',
+                        message: this.newMessageText,
+                    }
+                    this.messages.push(newMessage)
+                    this.newMessageText = ''
+                    renderApp()
                 }
-                store._state.dialogs.messages.push(newMessage)
-                store._state.dialogs.messages.newMessageText = ''
-                renderApp()
             },
         },
     },
