@@ -10,6 +10,7 @@ import { Routes, Route } from 'react-router-dom'
 const Main = (props) => {
     return (
         <main className={styles.main}>
+            <Routes></Routes>
             <Routes>
                 <Route
                     path='/profile/*'
@@ -28,7 +29,6 @@ const Main = (props) => {
                             dispatch={props.store.dispatch}
                         />
                     }
-
                 />
             </Routes>
         </main>

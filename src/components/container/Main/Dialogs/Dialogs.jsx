@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Dialogs.module.scss';
 import Friends from './Friends/Friends';
-import Messages from './Messages/Messages';
+import Messages from './Friends/Friend/Messages/Messages';
 
 
 const Dialogs = (props) => {
