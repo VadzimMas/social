@@ -1,16 +1,8 @@
 import userAvatar from '../img/shared/avatar.png'
 import friendAvatar from '../img/shared/avatar.png'
 import { renderApp } from '../index.js'
-
-const ADD_POST = 'ADD-POST'
-const CHANGE_NEW_POST_TEXT = 'CHANGE-NEW-POST-TEXT'
-const SET_LIKES_COUNT = 'SET-LIKES-COUNT'
-const SET_DISLIKES_COUNT = 'SET-DISLIKES-COUNT'
-const CHANGE_NEW_MASSAGE_TEXT = 'CHANGE-NEW-MASSAGE-TEXT'
-const ADD_MESSAGE = 'ADD-MESSAGE'
-
-
-
+import profileReducer from './profile-reducer';
+import dialogsReducer from './dialogs-reducer';
 
 const store = {
     _state: {
@@ -72,20 +64,16 @@ const store = {
                     }
                     this.posts.push(newPost)
                     this.newPostText = ''
-                    renderApp()
                 }
             },
             changeNewPostText(text) {
                 this.newPostText = text
-                renderApp()
             },
             setLikesCount(id) {
                 this.posts[id].like++
-                renderApp()
             },
             setDislikesCount(id) {
                 this.posts[id].dislike++
-                renderApp()
             }
         },
         dialogs: {
@@ -150,7 +138,6 @@ const store = {
             newMessageText: '',
             changeNewMessageText(text) {
                 this.newMessageText = text
-                renderApp()
             },
             addMessage() {
                 if (this.newMessageText !== '') {
@@ -162,7 +149,6 @@ const store = {
                     }
                     this.messages.push(newMessage)
                     this.newMessageText = ''
-                    renderApp()
                 }
             },
         },
@@ -171,64 +157,10 @@ const store = {
     getState() { return this._state },
 
     dispatch(action) {
-        if
-            (action.type === ADD_POST) {
-            store._state.profile.addPost()
-        }
-        else if
-            (action.type === CHANGE_NEW_POST_TEXT) {
-            store._state.profile.changeNewPostText(action.text)
-        }
-        else if
-            (action.type === SET_LIKES_COUNT) {
-            store._state.profile.setLikesCount(action.id)
-        }
-        else if
-            (action.type === SET_DISLIKES_COUNT) {
-            store._state.profile.setDislikesCount(action.id)
-        }
-        else if
-            (action.type === CHANGE_NEW_MASSAGE_TEXT) {
-            store._state.dialogs.changeNewMessageText(action.text)
-        }
-        else if
-            (action.type === ADD_MESSAGE) {
-            store._state.dialogs.addMessage()
-        }
+        profileReducer(store._state.profile, action)
+        dialogsReducer(store._state.dialogs, action)
+        renderApp()
     }
-}
-
-export function addPostActionCreator() {
-    return { type: ADD_POST }
-}
-
-export function changeNewPostTextActionCreator(e) {
-    return {
-        type: CHANGE_NEW_POST_TEXT,
-        text: e.target.value
-    }
-}
-
-export function setLikesCountActionCreator(id) {
-    return {
-        type: SET_LIKES_COUNT, id: id
-    }
-}
-
-export function setDislikesCountActionCreator(id) {
-    return {
-        type: SET_DISLIKES_COUNT, id: id
-    }
-}
-
-export function changeNewMessageTextActionCreator(e) {
-    return {
-        type: CHANGE_NEW_MASSAGE_TEXT,
-        text: e.target.value
-    }
-}
-export function addMessageActionCreator() {
-    return { type: ADD_MESSAGE }
 }
 
 export default store

@@ -1,6 +1,5 @@
 import styles from './Friends.module.scss';
 import Friend from './Friend/Friend';
-import { Route } from 'react-router-dom'
 
 
 const Friends = (props) => {

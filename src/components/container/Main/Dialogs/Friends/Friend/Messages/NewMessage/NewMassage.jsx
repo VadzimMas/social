@@ -2,7 +2,7 @@ import styles from './NewMessage.module.scss';
 import {
     changeNewMessageTextActionCreator,
     addMessageActionCreator
-} from '../../../../../../../../redux/store.js';
+} from '../../../../../../../../redux/dialogs-reducer.js';
 
 
 const MassageInput = (props) => {

@@ -3,7 +3,7 @@ import btn from '../../../../../styles/btn.module.scss'
 import {
     addPostActionCreator,
     changeNewPostTextActionCreator
-} from '../../../../../redux/store';
+} from '../../../../../redux/profile-reducer.js';
 
 const NewPost = (props) => {
     function changeNewPostText(e) {

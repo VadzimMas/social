@@ -5,7 +5,7 @@ import dislike from '../../../../../img/dislike.svg'
 import {
     setLikesCountActionCreator,
     setDislikesCountActionCreator
-} from '../../../../../redux/store';
+} from '../../../../../redux/profile-reducer.js';
 
 const Post = (props) => {
 
