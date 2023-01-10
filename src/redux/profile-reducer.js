@@ -7,16 +7,16 @@ const profileReducer = (state, action) => {
     switch (action.type) {
         case ADD_POST:
             state.addPost()
-            return state;
+            return state
         case CHANGE_NEW_POST_TEXT:
             state.changeNewPostText(action.text)
-            return state;
+            return state
         case SET_LIKES_COUNT:
             state.setLikesCount(action.id)
-            return state;
+            return state
         case SET_DISLIKES_COUNT:
             state.setDislikesCount(action.id)
-            return state;
+            return state
         default:
             return state
     }
