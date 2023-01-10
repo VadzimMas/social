@@ -157,8 +157,8 @@ const store = {
     getState() { return this._state },
 
     dispatch(action) {
-        profileReducer(store._state.profile, action)
-        dialogsReducer(store._state.dialogs, action)
+        store._state.profile = profileReducer(store._state.profile, action)
+        store._state.dialogs = dialogsReducer(store._state.dialogs, action)
         renderApp()
     }
 }
